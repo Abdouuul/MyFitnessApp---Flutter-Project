@@ -73,8 +73,8 @@ class _MainPageState extends State<MainPage>
             showDialog(
                 barrierColor: Colors.grey[800],
                 context: context,
-                builder: (context) => const AlertDialog(
-                      title:  Text('Add New Activity'),
+                builder: (context) =>  AlertDialog(
+                      title:  const Text('Add New Activity'),
                       content:  AddModal(),
                     ))
           },

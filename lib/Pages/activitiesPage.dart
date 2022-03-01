@@ -21,18 +21,11 @@ class _ActivityPage extends State<ActivityPage> {
     fetchDataList();
   }
 
-  fetchDataList() async {
+  void fetchDataList() async {
     List<Activity> result = await ActivitySerivce().getActivities();
-
-    if (result == null) {
-      print('Error fetch Or poor connection.');
-    } else {
-      print('Result . . . ');
-      print(result);
-      setState(() {
-        activities = result;
-      });
-    }
+    setState(() {
+      activities = result;
+    });
   }
 
   @override
