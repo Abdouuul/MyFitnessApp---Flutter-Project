@@ -15,7 +15,6 @@ class ActivityCard extends StatelessWidget {
         padding: const EdgeInsets.all(20),
         margin: const EdgeInsets.only(top: 10),
         width: MediaQuery.of(context).size.width - 30,
-        height: 120,
         decoration: BoxDecoration(
             image: DecorationImage(
               image: NetworkImage(activity.imagePath),
@@ -23,6 +22,7 @@ class ActivityCard extends StatelessWidget {
               opacity: 0.050,
             ),
             borderRadius: const BorderRadius.all(Radius.circular(10)),
+            boxShadow: [BoxShadow(color: Colors.grey, blurRadius: 10)],
             gradient: const LinearGradient(
                 begin: Alignment.centerLeft,
                 end: Alignment.centerRight,
