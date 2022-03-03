@@ -33,9 +33,9 @@ class AddModal extends StatelessWidget {
             decoration: const InputDecoration(hintText: 'Description'),
           ),
           DropdownButton(
+            hint: const Text('Duration'),
             isExpanded: true,
             alignment: Alignment.centerLeft,
-            hint: const Text('Duration'),
             onChanged: (String? newValue) {
               duration = newValue as String;
             },
@@ -52,8 +52,8 @@ class AddModal extends StatelessWidget {
             }).toList(),
           ),
           DropdownButton(
-            isExpanded: true,
             hint: const Text('Workout Type'),
+            isExpanded: true,
             onChanged: (String? newValue) {
               type = newValue as String;
             },

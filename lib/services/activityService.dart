@@ -1,9 +1,4 @@
-// import 'dart:convert';
-// import 'package:flutter/material.dart';
-// import 'dart:developer';
-// import 'package:firebase_core/firebase_core.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/models/activity.dart';
 

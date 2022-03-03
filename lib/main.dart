@@ -63,7 +63,7 @@ class _MainPageState extends State<MainPage>
           children: [
             const ActivityPage(),
             HomePage(),
-            const ProfilePage(),
+            ProfilePage(),
           ],
         ),
         floatingActionButton: FloatingActionButton(
