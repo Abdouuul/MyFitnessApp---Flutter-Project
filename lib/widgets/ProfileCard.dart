@@ -12,12 +12,13 @@ class ProfileCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(
         child: Column(
-      children: [
-        Stack(children: [
+      children: <Widget>[
+        Stack(children: <Widget>[
           buildImage(),
           buildEditButton(),
         ]),
         buildUserDetails(context),
+        buildDetails(context)
       ],
     ));
   }
@@ -88,5 +89,35 @@ class ProfileCard extends StatelessWidget {
         ],
       ),
     );
+  }
+
+  Widget buildDetails(BuildContext context) {
+    return Container(
+        padding: const EdgeInsets.all(20),
+        margin: const EdgeInsets.only(top: 20),
+        width: MediaQuery.of(context).size.width - 30,
+        decoration: BoxDecoration(
+          borderRadius: const BorderRadius.all(Radius.circular(10)),
+          boxShadow: const [BoxShadow(color: Colors.grey, blurRadius: 10)],
+          color: Colors.grey[50],
+        ),
+        child: Column(children: <Widget>[
+          Row(
+            children: <Widget>[
+              const Expanded(
+                  flex: 1, child: Icon(Icons.monitor_weight_outlined)),
+              const Expanded(flex: 6, child: Text("Weight")),
+              Expanded(flex: 2, child: Text(user.weight.toString() + " Kg")),
+            ],
+          ),
+          const SizedBox(height: 10),
+          Row(
+            children: <Widget>[
+              const Expanded(flex: 1, child: Icon(Icons.height)),
+              const Expanded(flex: 6, child: Text("Height")),
+              Expanded(flex: 2, child: Text(user.height.toString() + " Cm")),
+            ],
+          ),
+        ]));
   }
 }

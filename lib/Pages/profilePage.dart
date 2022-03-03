@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/Pages/editProfile.dart';
 import 'package:flutter_application_1/models/user.dart';
 import 'package:flutter_application_1/services/profileService.dart';
 import 'package:flutter_application_1/widgets/ProfileCard.dart';
@@ -37,13 +38,15 @@ class _ProfilePage extends State<ProfilePage> {
     });
   }
 
-  void onClicked() {}
+  void onClicked() {
+    Navigator.of(context).push(
+        MaterialPageRoute(builder: (context) => editProfilePage(user: user)));
+  }
 
   @override
   Widget build(BuildContext context) => Scaffold(
           body: Center(
-        child: Column(children: <Widget>[
-          ProfileCard(user: user, onClicked: onClicked)
-        ]),
+        child: Column(
+            children: <Widget>[ProfileCard(user: user, onClicked: onClicked)]),
       ));
 }

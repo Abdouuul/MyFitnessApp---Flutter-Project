@@ -30,13 +30,15 @@ class ProfileService {
     }
   }
 
-  void updateActivity(User user) {
+  void updateUser(User user) {
     profilesRef.doc(user.id).update({
       'firstName': user.firstName,
       'lastName': user.lastName,
       'imageUrl': user.imageUrl,
       'weight': user.weight,
       'height': user.height,
+      'age': user.age,
+      'email': user.email,
     });
   }
 }
